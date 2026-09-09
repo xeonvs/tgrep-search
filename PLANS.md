@@ -4,7 +4,7 @@
 
 ### tgrep-search 1.0.1 — initial public skill release and publication-workflow correction
 
-- **Status:** active
+- **Status:** completed
 - **Release classification:** initial public release
 - **Target:** publish an instruction-only, self-contained `tgrep-search` plugin
   for Codex and Claude Code. The same canonical `SKILL.md` remains directly
@@ -27,6 +27,8 @@
 | TS-04 | active | Correct the invalid immutable release-action SHA through a protected PR, publish immutable `v1.0.1`, and confirm tag/release assets with one compact readback. |
 
 ## Completion
+
+**Completed 2026-09-09.** The immutable public GitHub release  is published and its tag, archive, and checksum were read back.
 
 Complete after the immutable public GitHub release `v1.0.1` exists and a
 minimal readback confirms the tag, release, and its assets. `v1.0.0` remains an
