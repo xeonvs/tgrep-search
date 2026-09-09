@@ -31,7 +31,7 @@ def main() -> int:
             return 1
     for path in MANIFESTS:
         value = json.loads(path.read_text(encoding="utf-8"))
-        if value.get("name") != "tgrep-search" or value.get("version") != "1.0.0" or value.get("license") != "MIT":
+        if value.get("name") != "tgrep-search" or value.get("version") != "1.0.1" or value.get("license") != "MIT":
             print("validation failed: manifest identity drift")
             return 1
     print("public package validation passed")
