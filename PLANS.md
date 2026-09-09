@@ -21,9 +21,9 @@
 
 | ID | State | Work and acceptance evidence |
 | --- | --- | --- |
-| TS-01 | active | Add the canonical public skill and generated Codex/Claude bundle. |
-| TS-02 | queued | Add deterministic package, manifest and public-content validation. |
-| TS-03 | queued | Perform self-review, run checks, push implementation and complete Draft review. |
+| TS-01 | done | Canonical skill and byte-identical Codex/Claude bundle are present. |
+| TS-02 | done | Offline package, manifest and public-content validation passes. |
+| TS-03 | active | Exact-head self-review, hosted validation and protected merge remain. |
 | TS-04 | queued | Publish immutable `v1.0.0` and confirm tag/release assets with one compact readback. |
 
 ## Completion
