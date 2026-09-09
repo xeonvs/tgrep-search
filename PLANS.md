@@ -24,15 +24,15 @@
 | TS-01 | done | Canonical skill and byte-identical Codex/Claude bundle are present. |
 | TS-02 | done | Offline package, manifest and public-content validation passes. |
 | TS-03 | done | Exact-head self-review, hosted validation and protected merge completed in PR #1. |
-| TS-04 | active | Correct the invalid immutable release-action SHA through a protected PR, publish immutable `v1.0.1`, and confirm tag/release assets with one compact readback. |
+| TS-04 | done | Protected PR #2 corrected the action pin; signed `v1.0.1` published successfully with archive and `SHA256SUMS` readback. `v1.0.0` remains an unpublished failed tag. |
 
 ## Completion
 
-**Completed 2026-09-09.** The immutable public GitHub release  is published and its tag, archive, and checksum were read back.
+**Completed 2026-09-09.** Protected PR #2 corrected the release action pin. The
+immutable public GitHub release [`v1.0.1`](https://github.com/xeonvs/tgrep-search/releases/tag/v1.0.1)
+was published from commit `e316614144d14efb7bdf63f49ff820a12bdedc84`; its
+archive and `SHA256SUMS` were read back. The earlier `v1.0.0` tag remains an
+unpublished failed attempt and was neither moved nor reused.
 
-Complete after the immutable public GitHub release `v1.0.1` exists and a
-minimal readback confirms the tag, release, and its assets. `v1.0.0` remains an
-unpublished tag whose release job failed before asset creation; it is not moved or
-reused. The separate
-`xeonvs-engineering` catalog is created only after this release and references
-this package without changing its scope.
+The separate `xeonvs-engineering` catalog may now reference the released package
+without changing the skill scope.
