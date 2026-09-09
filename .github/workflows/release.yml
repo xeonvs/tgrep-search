@@ -22,9 +22,9 @@ jobs:
       - run: python scripts/validate_public_package.py
       - run: |
           mkdir dist
-          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -czf dist/tgrep-search-v1.0.0.tar.gz plugins/tgrep-search
-          sha256sum dist/tgrep-search-v1.0.0.tar.gz > dist/SHA256SUMS
-      - uses: softprops/action-gh-release@6cbd405e2c4e5d7e8159b0371b1daebd3b9a16f4
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -czf dist/tgrep-search-${GITHUB_REF_NAME}.tar.gz plugins/tgrep-search
+          sha256sum dist/tgrep-search-${GITHUB_REF_NAME}.tar.gz > dist/SHA256SUMS
+      - uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
         with:
           generate_release_notes: true
           files: dist/*
