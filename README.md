@@ -1,5 +1,9 @@
 # tgrep Search Skill
 
+<p align="center">
+  <img src="skill/tgrep-search/assets/brand/logo.svg" alt="tgrep Search" width="160">
+</p>
+
 A public, instruction-only skill for efficient and safe local source-tree search
 with [microsoft/tgrep](https://github.com/microsoft/tgrep). It helps an agent
 choose an inexpensive one-off scan, a bounded local index, a managed search
