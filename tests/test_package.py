@@ -10,6 +10,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PackageTest(unittest.TestCase):
+    def test_workflow_action_pins_are_current(self) -> None:
+        workflows = "\n".join(
+            (ROOT / ".github" / "workflows" / name).read_text()
+            for name in ("ci.yml", "release.yml")
+        )
+        self.assertIn("actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1", workflows)
+        self.assertIn("softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64", workflows)
+        self.assertNotIn("a26af69be951a213d495a4c3e4e4022e16d87065", workflows)
+        self.assertNotIn("3bb12739c298aeb8a4eeaf626c5b8d85266b0e65", workflows)
+
     def test_package_is_canonical_and_public(self) -> None:
         for script, args in (("build_plugin.py", ("--check",)), ("validate_public_package.py", ())):
             result = subprocess.run(
