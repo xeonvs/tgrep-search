@@ -54,7 +54,7 @@ class PackageTest(unittest.TestCase):
     def test_codex_interface_paths_and_identity(self) -> None:
         plugin = ROOT / "plugins" / "tgrep-search"
         manifest = json.loads((plugin / ".codex-plugin" / "plugin.json").read_text())
-        self.assertEqual(manifest["version"], "1.0.2")
+        self.assertEqual(manifest["version"], "1.0.3")
         interface = manifest["interface"]
         self.assertEqual(interface["brandColor"], "#67E8F9")
         for key in ("composerIcon", "logo", "logoDark"):

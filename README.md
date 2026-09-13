@@ -9,6 +9,11 @@ with [microsoft/tgrep](https://github.com/microsoft/tgrep). It helps an agent
 choose an inexpensive one-off scan, a bounded local index, a managed search
 server, or an exact current-filesystem scan.
 
+For small or one-off searches, `rg` is the default (including hidden-file and
+exact current-filesystem searches); an already-available `tgrep` may also be
+used without setup. Installation or indexed setup is reserved for an explicit
+request or a justified repeated-search benefit under normal authorization.
+
 The package contains no `tgrep` binary, automatic installer, hook, MCP server,
 telemetry, local index, credentials, or personal data. It does not alter a
 repository unless an agent is separately authorized to create an ignored local
