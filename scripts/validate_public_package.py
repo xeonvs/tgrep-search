@@ -35,7 +35,7 @@ def main() -> int:
         print("validation failed: packaged skill differs from canonical source")
         return 1
     for path in PLUGIN.rglob("*"):
-        if path.is_symlink() or any(part in {".git", ".tgrep-index", "__pycache__"} for part in path.relative_to(PLUGIN).parts):
+        if path.is_symlink() or any(part in {".git", ".tgrep", ".tgrep-index", "__pycache__"} for part in path.relative_to(PLUGIN).parts):
             print("validation failed: unsupported packaged artifact")
             return 1
         if path.is_file():
@@ -64,7 +64,7 @@ def main() -> int:
         value = json.loads(path.read_text(encoding="utf-8"))
         if (
             value.get("name") != "tgrep-search"
-            or value.get("version") != "1.0.3"
+            or value.get("version") != "1.1.0"
             or value.get("license") != "MIT"
         ):
             print("validation failed: manifest identity drift")

@@ -1,4 +1,5 @@
 .tgrep-index/
+.tgrep/
 __pycache__/
 .pytest_cache/
 .venv/
