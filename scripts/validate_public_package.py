@@ -64,7 +64,7 @@ def main() -> int:
         value = json.loads(path.read_text(encoding="utf-8"))
         if (
             value.get("name") != "tgrep-search"
-            or value.get("version") != "1.1.0"
+            or value.get("version") != "1.1.1"
             or value.get("license") != "MIT"
         ):
             print("validation failed: manifest identity drift")
