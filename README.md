@@ -9,7 +9,7 @@ with [microsoft/tgrep](https://github.com/microsoft/tgrep). It helps an agent
 choose an inexpensive one-off scan, a bounded local index, a managed search
 server, or an exact current-filesystem scan.
 
-Version **1.1.0** is checked against **tgrep 1.2.4**. It includes indexed hidden-file
+Version **1.1.1** is checked against **tgrep 1.2.7**. It includes indexed hidden-file
 searches, explicit scan/freshness boundaries, and an optional
 [managed-v2 shared-worktree route](skill/tgrep-search/references/shared-worktrees.md).
 Shared mode remains opt-in and requires a host-owned supervised lifecycle.

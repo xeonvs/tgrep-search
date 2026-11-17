@@ -12,7 +12,7 @@ import time
 import unittest
 
 
-SUPPORTED_VERSION = "1.2.4"
+SUPPORTED_VERSION = "1.2.7"
 NEEDLE = "behavioral_fixture_hit"
 
 
